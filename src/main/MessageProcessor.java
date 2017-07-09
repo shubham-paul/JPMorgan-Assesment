@@ -16,6 +16,10 @@ import java.util.*;
 
 /**
  * Created by shubhampaul on 7/9/2017.
+ *
+ * ClassName: MessageProcessor
+ *
+ *      MessageProcessor class is a starting point of the sales application which reads an input file and processes it.
  */
 public class MessageProcessor {
 
@@ -35,14 +39,11 @@ public class MessageProcessor {
                 MESSAGE_COUNT++;
                 processMessage(line);
             }
-
         }
 
         catch (IOException e){
             e.printStackTrace();
         }
-
-
     }
 
     /**
@@ -99,7 +100,6 @@ public class MessageProcessor {
         if (MESSAGE_COUNT % 50 ==0) {
             generatePriceAdjustmentReport();
         }
-
     }
 
 
@@ -117,7 +117,6 @@ public class MessageProcessor {
         double totalSalesValue = 0;
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
-           // System.out.println(pair.getKey() + " = " + pair.getValue());
 
             List<Sale> productSalesList = (List<Sale>) pair.getValue();
             int quantity = 0;
